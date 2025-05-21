@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lingoai-deployment
+  labels:
+    app: lingoai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lingoai
+  template:
+    metadata:
+      labels:
+        app: lingoai
+    spec:
+      containers:
+      - name: lingoai-container
+        image: rohanrajaggarwal/lingoai:lingoai_image
+        ports:
+        - containerPort: 8000

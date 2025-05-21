@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+gtts
+googletrans==4.0.0-rc1
+jinja2
+python-multipart
+httpx
